@@ -1,0 +1,66 @@
+{
+  "rss_feeds": [
+    {
+      "name": "PubMed - Child Development",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/rss/search/1j0gMJ_sOPWLK2Y8NKVWYQ7sSdqHGZVJ9a_Lpbq0VGpb4bPxHT/?limit=20&utm_campaign=pubmed-2&fc=20250101000000",
+      "search_url": "https://pubmed.ncbi.nlm.nih.gov/?term=child+development+education+neuroscience&sort=date",
+      "category": "science",
+      "language": "en",
+      "note": "PubMed RSS - create your own saved search at pubmed.ncbi.nlm.nih.gov"
+    },
+    {
+      "name": "Nature - Education",
+      "url": "https://www.nature.com/subjects/education.rss",
+      "category": "science",
+      "language": "en"
+    },
+    {
+      "name": "Education Week",
+      "url": "https://www.edweek.org/feed",
+      "category": "skills",
+      "language": "en"
+    },
+    {
+      "name": "EdSurge",
+      "url": "https://www.edsurge.com/feeds/articles.rss",
+      "category": "ai",
+      "language": "en"
+    },
+    {
+      "name": "MIT Technology Review - AI",
+      "url": "https://www.technologyreview.com/feed/",
+      "category": "ai",
+      "language": "en"
+    },
+    {
+      "name": "ResearchMap - 教育学",
+      "url": "https://researchmap.jp/search/community?type=rss&q=%E6%95%99%E8%82%B2%E5%AD%A6",
+      "category": "science",
+      "language": "ja"
+    },
+    {
+      "name": "こどもとIT (Impress)",
+      "url": "https://edu.watch.impress.co.jp/docs/news/rss.xml",
+      "category": "ai",
+      "language": "ja"
+    },
+    {
+      "name": "教育新聞",
+      "url": "https://www.kyobun.co.jp/feed/",
+      "category": "skills",
+      "language": "ja"
+    }
+  ],
+  "keywords": {
+    "age_0_2": ["infant", "baby", "toddler", "attachment", "sensory", "乳児", "赤ちゃん", "愛着", "感覚統合", "0歳", "1歳", "2歳"],
+    "age_3_5": ["preschool", "kindergarten", "play-based", "language acquisition", "幼児", "保育", "幼稚園", "言語", "遊び", "3歳", "4歳", "5歳"],
+    "age_6_9": ["elementary", "primary school", "reading", "literacy", "numeracy", "小学校低学年", "読み書き", "算数", "6歳", "7歳", "8歳", "9歳"],
+    "age_10_12": ["upper elementary", "metacognition", "abstract thinking", "小学校高学年", "メタ認知", "抽象", "10歳", "11歳", "12歳"],
+    "age_13_15": ["adolescent", "middle school", "critical thinking", "identity", "中学生", "思春期", "批判的思考", "13歳", "14歳", "15歳"]
+  },
+  "pillar_keywords": {
+    "science": ["neuroscience", "brain", "cognitive", "development", "research", "study", "脳科学", "発達", "研究", "認知"],
+    "skills": ["skill", "competency", "social", "emotional", "collaboration", "communication", "能力", "スキル", "社会性", "協働"],
+    "ai": ["AI", "artificial intelligence", "technology", "digital", "programming", "computational", "人工知能", "テクノロジー", "プログラミング", "デジタル"]
+  }
+}

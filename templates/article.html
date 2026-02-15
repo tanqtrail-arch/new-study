@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ article.excerpt }}">
+  <title>{{ article.headline }} | 15歳までにみにつけた本当の学力</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+  <div class="daily-update">
+    <strong>毎日更新</strong> &#8212; 子どもの学びに関する最新情報をお届けします
+  </div>
+
+  <header class="site-header">
+    <div class="header-top">
+      <div class="site-logo">
+        <a href="../../index.html" style="color: inherit; text-decoration: none;">
+          <h1>
+            15歳までにみにつけた本当の学力
+            <span>Real Learning by Age 15 &#8212; Science-Based Education News</span>
+          </h1>
+        </a>
+      </div>
+      <div class="header-date"></div>
+      <button class="menu-toggle" aria-label="メニュー" aria-expanded="false">&#9776;</button>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../../index.html">トップ</a></li>
+        <li><a href="../../age/0-2/index.html">0-2歳</a></li>
+        <li><a href="../../age/3-5/index.html">3-5歳</a></li>
+        <li><a href="../../age/6-9/index.html">6-9歳</a></li>
+        <li><a href="../../age/10-12/index.html">10-12歳</a></li>
+        <li><a href="../../age/13-15/index.html">13-15歳</a></li>
+        <li><a href="../science.html">最新の科学</a></li>
+        <li><a href="../skills.html">社会が求める能力</a></li>
+        <li><a href="../ai-era.html">AI時代を生きる</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="article-page">
+    <article>
+      <div class="article-header">
+        {% set pillar_colors = {"science": "#7e57c2", "skills": "#26a69a", "ai": "#42a5f5"} %}
+        {% set pillar_labels = {"science": "最新の科学", "skills": "社会が求める能力", "ai": "AI時代を生きる"} %}
+        {% set age_labels = {"age_0_2": "0-2歳", "age_3_5": "3-5歳", "age_6_9": "6-9歳", "age_10_12": "10-12歳", "age_13_15": "13-15歳", "all": "全年齢"} %}
+
+        <span class="article-category" style="background: {{ pillar_colors.get(article.pillar, '#7e57c2') }}">
+          {{ pillar_labels.get(article.pillar, '最新の科学') }}
+        </span>
+
+        <h1>{{ article.headline }}</h1>
+
+        {% if article.subtitle %}
+        <p style="font-size: 1.1rem; color: #666; margin-bottom: 16px;">{{ article.subtitle }}</p>
+        {% endif %}
+
+        <div class="article-info">
+          <time>{{ generated_date }}</time>
+          <span>対象: {{ age_labels.get(article.age_group, '全年齢') }}</span>
+          <span>出典: {{ article.source }}</span>
+        </div>
+      </div>
+
+      <div class="article-content">
+        {{ article.body_html | safe }}
+      </div>
+
+      {% if article.key_points %}
+      <div class="key-points">
+        <h3>この記事のポイント</h3>
+        <ul>
+          {% for point in article.key_points %}
+          <li>{{ point }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if article.parent_advice %}
+      <div style="background: linear-gradient(135deg, #fff3e0, #ffe0b2); border-radius: 8px; padding: 24px; margin: 32px 0;">
+        <h3 style="margin: 0 0 12px; color: #e65100;">&#x1F4A1; 保護者へのアドバイス</h3>
+        <p style="margin: 0; line-height: 1.8;">{{ article.parent_advice }}</p>
+      </div>
+      {% endif %}
+
+      {% if article.link %}
+      <p style="margin-top: 32px; font-size: 0.85rem; color: #999;">
+        元記事: <a href="{{ article.link }}" target="_blank" rel="noopener">{{ article.source }}</a>
+      </p>
+      {% endif %}
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h3>15歳までにみにつけた本当の学力</h3>
+        <p>0歳から15歳までの子どもの発達と学びを、最新の科学的知見に基づいてお届けする教育ニュースサイトです。</p>
+      </div>
+      <div class="footer-links">
+        <h4>年齢別</h4>
+        <ul>
+          <li><a href="../../age/0-2/index.html">0-2歳（乳児期）</a></li>
+          <li><a href="../../age/3-5/index.html">3-5歳（幼児期）</a></li>
+          <li><a href="../../age/6-9/index.html">6-9歳（学童前期）</a></li>
+          <li><a href="../../age/10-12/index.html">10-12歳（学童後期）</a></li>
+          <li><a href="../../age/13-15/index.html">13-15歳（思春期）</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>3つの柱</h4>
+        <ul>
+          <li><a href="../science.html">最新の科学</a></li>
+          <li><a href="../skills.html">社会が求める能力</a></li>
+          <li><a href="../ai-era.html">AI時代を生きる</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>サイト情報</h4>
+        <ul>
+          <li><a href="#">サイトについて</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{ year }} 15歳までにみにつけた本当の学力. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
